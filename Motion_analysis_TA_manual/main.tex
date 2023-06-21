@@ -131,7 +131,7 @@ If we choose the x-axis along the displacement axis, with $x = l\theta$ we arriv
 \begin{align}
     x(t) = x_0\cos(\omega_0 t + \phi_0).
 \end{align}
-The period T is straightforward derived from the eigen-frequency
+The period T is straightforward derived from the eigenfrequency
 
 \begin{align}
     T=\frac{2\pi}{\omega}.
@@ -180,7 +180,7 @@ If we plot the position against the velocity the phase-space plot shows a circle
 
 \subsection{Driven (Damped) Harmonic Motion}
 \subsubsection{Theory Driven Damped Harmonic Motion}
-In this experiment we have a spring with stiffness k and natural frequency $\omega_0$, connected to a periodic (sinusoidal) driving force of amplitude $A(t) = F_0\cos(\omega_d t)$ and frequency $\omega_d$. Furthermore, the spring is connected to an (adjustable) mass m and the end of the spring is inside a tube that contains a viscous liquid. The (periodic) motion inside the viscous liquid results in a damping (counter) force $F_y = -cv$, with c a viscous damping coefficient and $v$ the velocity of the tube inside the liquid. The strenght of the viscious damping can be controlled by hand. The Equation of Motion (EoM) in the y-direction (denoted by x) is:
+In this experiment we have a massless spring with stiffness k and natural frequency $\omega_0$, connected to a periodic (sinusoidal) driving force $A(t) = F_0\cos(\omega_d t)$ and frequency $\omega_r$. Furthermore, the spring is connected to an adjustable mass m and the end of the spring is inside a tube that contains a viscous liquid. The (periodic) motion inside the viscous liquid results in a damping force $F_y = -cv$, with c a viscous damping coefficient and $v$ the velocity of the tube inside the liquid. The strength of the viscous damping can be controlled by hand. The Equation of Motion (EoM) in the y-direction (denoted by x) is:
 
 \begin{align}
     m\ddot{x} = -c\dot{x} - kx + A(t) & \\
@@ -192,34 +192,35 @@ here we have introduced the damping ratio $\zeta = \frac{c}{2\sqrt{mk}}$. The so
 \begin{align}
     x(t) = \frac{F_0}{m Z(\omega_0,\omega_r,\zeta) \omega_r}\cos(\omega_r t + \phi),
 \end{align}
-with $Z(\omega_0,\omega_r,\zeta)$ is the linear response function:
+$Z(\omega_0,\omega_r,\zeta)$ is the linear response function (or impedence):
 
 \begin{align}
     Z(\omega_0,\omega_r,\zeta) = \sqrt{(2\omega_0\zeta)^2 + (\omega_0-\omega_r)^2}.
 \end{align}
 
-The linear response function has a maximum on resonance $\omega_0=\omega_r$, with amplitude $Z = 2\omega_0\zeta$. In the absence of damping $\zeta = 0$, the response function is zero, hence the amplitude is infinite. For a finite damping $\zeta > 0$ the amplitude of the oscillation is finite.
+The linear response function is minimum on resonance $\omega_0=\omega_r$, with amplitude $Z = 2\omega_0\zeta$. In the absence of damping $\zeta = 0$, the response function is zero, hence the amplitude of the resulting motion is infinite. For finite damping $\zeta > 0$ the amplitude of the oscillation is also finite.
 
 Furthermore, the phase of the response oscillation $x(t)$ has the form: 
 \begin{align}
     \phi = \tan^{-1}\bigg{(}\frac{\omega_0\omega_r\zeta}{\omega_0^2-\omega_r^2}\bigg{)} + n\pi.
 \end{align}
-On resonance the phase between the driving force and the natural frequency $\phi$ is $\pi/2$ out of phase. Hence, the sinusoidal force $A$ is exactly out of phase with the natural frequency of the system, this, ofcourse, results in maximum energy transfer.
-This can be verfied in the experiment. 
+On resonance the phase $\phi$ between the driving force and the natural oscillation is $\pi/2$: exactly out of phase. This is a well known aspect for resonance systems. A $\pi/2$ phase lag results in maximum energy transfer. This can be verified experimentally, but can also be seen visually during the experiment. 
 
 \subsubsection{Theory Damped Harmonic Motion}
-
-In the absence of a driving force $A(t) = 0$, the EoM of the system is a damped harmonic oscillator:
+In the previous section we assumed that the harmonic oscillator was subjected to a sinusoidal driving force $A_y(t)$. In this section I will dive deeper in the theory of the undriven harmonic motion i.e. $A_y(t) = 0$. In the absence of a driving force, the EoM of the system is a damped harmonic oscillator:
 
 \begin{align}
     \ddot{x} + 2\zeta\omega_0\dot{x} +\omega_0^2x = 0.
     \label{Eq. Force balance damping}
 \end{align}
-The solution Eq. \ref{Eq. Force balance damping} can be obtained by using a trial solution $x(t) = Ae^{\lambda t}$ and solving the characteristic equation for $\lambda$:
+
+The solution Eq. \ref{Eq. Force balance damping} can be obtained by filling in a trial solution $x(t) = Ae^{\lambda t}$ in Eq. \ref{Eq. Force balance damping} and solving the characteristic equation for $\lambda$:
+
 \begin{align}
-    \lambda^2 + 2\zeta\omega_0\lambda + \omega_0^2 = 0
+    \lambda^2 + 2\zeta\omega_0\lambda + \omega_0^2 = 0.
 \end{align}
-The solutions of the characteristic equation are the normal modes of the system, hence $\lambda_{\pm} = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2}$. In the absence of damping $\zeta = 0$ the frequency of the system is the natural frequency $\omega_0$. For small damping $\zeta>0$ the oscillation is damped by $\tau = \zeta \omega_0$ and the frequency of the system is almost the natural frequency $\omega_1 \approx \omega_0$. If the oscillation is subjected to a (very) strong damping force $\lambda > 1$ the system is overdamped. The eigenmodes are purely real valued and the solutions are exponentially decaying. The timescale associated with the strong damping $\tau_{\lambda>0}$ is larger than the critically damped oscillator $\zeta =1$, with $\tau_{\lambda=0} = -\omega_0$. Stronger damping does not imply faster damping.\\
+
+The solutions of the characteristic equation are the normal modes of the system, we find that $\lambda_{\pm} = -\zeta\omega_0 \pm i\omega_0\sqrt{1-\zeta^2}$. In the absence of damping $\zeta = 0$ the frequency of the system is the natural frequency $\omega_0$. For small damping $\zeta>0$ the oscillation is damped by $\tau = \zeta \omega_0$ and the frequency of the system is almost the natural frequency $\omega_1 \approx \omega_0$. If the oscillation is subjected to a (very) strong damping force $\lambda > 1$ the system is overdamped. The eigenmodes are purely real valued and the solutions are exponentially decaying. The timescale associated with the strong damping $\tau_{\lambda>0}$ is larger than the critically damped oscillator $\zeta =1$, with $\tau_{\lambda=0} = -\omega_0$. Stronger damping does not imply faster damping.
 
 Using the solutions of the characteristic equation the x-position and the velocity as a function of time is given by:
 \begin{align}
@@ -238,10 +239,10 @@ The total energie of the system is given by $E=\frac{1}{2}mv^2+\frac{1}{2}kx^2$,
     = \frac{d}{dt}(\frac{A^2 k}{2}) = 0
 \end{align}
 
-Lastly, the above analysis can be extended to a 2D-parameter space by using the tools of dynamical system theorie. I define the vector $\vec{A} = \begin{pmatrix}
+Lastly, we can extend the above analysis by examining the phase-space (x-v or x-p) by using the tools of dynamical system theory. I define the vector $\vec{A} = \begin{pmatrix}
     x\\
     v
-\end{pmatrix}$ and decouple the differential equation, hence:
+\end{pmatrix}$ and decouple the differential equation:
 
 \begin{align}
     \frac{d}{dt}\vec{A} = M\vec{A} & \\
@@ -256,15 +257,19 @@ Lastly, the above analysis can be extended to a 2D-parameter space by using the 
         x\\
         v
     \end{pmatrix}.
+    \label{Eq. damping matrix}
 \end{align}
-We solve this equation by solving for the eigenvalues $|A-\lambda I| = 0$, the solution has the form:
+M is the interaction matrix that connects the position to the momentum and vice versa. The off-diagonal terms couples the position and velocity and are Hamiltonian forces. The diagonal terms of M are gradient forces, i.e. non-Hamiltonian, thus do not conserve energy. From M we observe that a change in velocity results in change is the position and vice versa, the coupling results in an ellipsoid shape in phase space (x-v).
+
+Subsequently, we solve equation \ref{Eq. damping matrix} by solving for the eigenvalues $|A-\lambda I| = 0$, the solution has the form
 
 \begin{align}
     A(t) = A_0 e^{\lambda_{\pm}t} & \\
     A(t) = A_0 e^{-\zeta \omega_0 t}e^{\pm i\omega_1 t},
 \end{align}
+
 with $\lambda_{\pm}$ the eigenvalues of the matrix $M$.
-Since the real part of eigenvalues of $\lambda_{\pm}$ are smaller than zero s$\mathcal{R}e(\lambda_{\pm}) < 0 $ and the imaginary part is non-zero $\mathcal{I}m(\lambda_{\pm})\neq 0$, the phase-space picture (x-v plane) will show inward spiraling $\zeta>0$ circles. In the absence of a restoring force $c = 0$, the phase space plot is a perfect circle that shows that the position and the velocity of the harmonic oscillator are coupled. 
+Since the real part of eigenvalues of $\lambda_{\pm}$ is smaller than zero s$\mathcal{R}e(\lambda_{\pm}) < 0 $ and the imaginary part is non-zero $\mathcal{I}m(\lambda_{\pm})\neq 0$, the phase-space picture (x-v plane) will show inward spiraling $\zeta>0$ circles. In the absence of a restoring force $c = 0$, the phase space plot is a perfect circle that shows that the position and the velocity of the harmonic oscillator are coupled. 
 
 An equivalent analysis can be done in a simple (damped) pendulum, in that case the interpretation is simple: the phase diagram shows the transfer of potential energy to kinetic energy and vice versa. A similar argument can be made here. 
 
@@ -436,7 +441,7 @@ For a linear pendulum we can derive the Lyapunov exponent by hand. We start by d
 \begin{align}
     \theta(t) =A\cos(\omega t + \phi),
 \end{align}
-with A the amplitude, $\omega$ the eigen frequency of the pendulum and $\phi$ the starting angle. The separation between the oribits is now given by:
+with A the amplitude, $\omega$ the eigenfrequency of the pendulum and $\phi$ the starting angle. The separation between the oribits is now given by:
 \begin{align}
     |\delta \theta(t)| = \theta(t)-\theta'(t) & \\
     = A\cos(\omega t + \phi) - A\cos(\omega t +\phi +\epsilon) & \\

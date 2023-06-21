@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1687295534 "/Users/jbusink/Documents/Motion_analysis_Assistent_Manual/Motion_analysis_TA_manual/main.tex" "main.pdf" "main" 1687295534
-  "/Users/jbusink/Documents/Motion_analysis_Assistent_Manual/Motion_analysis_TA_manual/main.tex" 1687295533 59296 b6a74e5c309e9d836c21992166d4435e ""
+["pdflatex"] 1687334238 "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" "main.pdf" "main" 1687334239
+  "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" 1687334238 60089 c753b68d9a4bd3b44d65efb6fbea810d ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -69,9 +69,9 @@
   "figures/Pendulum setup.png" 1687273967 133767 ac652f66fc788ff56fe3637b7e75c66a ""
   "figures/Rotating Wheel.pdf" 1684329310 214584 721837373df9612023489271e56ed215 ""
   "figures/wiel.png" 1679573936 44099 cae3087e3d5464d144098af70e3884de ""
-  "main.aux" 1687295534 8257 450e46cc0707b3248d2b4818252cc25c "pdflatex"
-  "main.tex" 1687295533 59296 b6a74e5c309e9d836c21992166d4435e ""
-  "main.toc" 1687295534 3069 d9ec8b194415f602fec042e296ba60e0 "pdflatex"
+  "main.aux" 1687334239 8297 0e5e73b8042f53e496390c1a48ec7a87 "pdflatex"
+  "main.tex" 1687334238 60089 c753b68d9a4bd3b44d65efb6fbea810d ""
+  "main.toc" 1687334239 3069 09383da96ed6fc83bb1d0ee13b866661 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
