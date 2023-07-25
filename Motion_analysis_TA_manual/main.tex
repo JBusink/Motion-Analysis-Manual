@@ -20,7 +20,7 @@
 \newpage
 
 \section{Introduction}
-This manual is designed to assist Teacher Assistants (TA's) in effectively teaching the Motion Analysis (MA) experiment to second-year bachelor students in the MNW2 practical and NSP2 practical series. This manual aims to provide detailed guidance on essential aspects, including proficient handling of scientific equipment, implementing an optimal data acquisition strategy and we present several example experiments that the students can study within the given time constraint. The first part of the manual was originally written by Munib Ozdemir as part of an education project. It was translated and adapted in this manual. Finally, we provide a preliminary daily schedule. We value your input and suggestions to enhance this manual further.
+This manual is designed to assist Teacher Assistants (TA's) in effectively teaching the Motion Analysis (MA) experiment to second-year bachelor students in the MNW2 practical and NSP2 practical series. This manual aims to provide detailed guidance on essential aspects, including proficient handling of scientific equipment, implementing an optimal data acquisition strategy and we present several example experiments that the students can study within the given time constraint. The first part of the manual was originally written by Munib Ozdemir as part of an education project. It was translated and adapted in this manual. We value your input and suggestions to enhance this manual further.
 
 \newpage 
 
@@ -89,7 +89,7 @@ The software that is used during the experiment is the following:
 \item \textbf{LuCam Capture}. LuCam Capture is a very basic software to test the camera. LuCam Capture can only capture images, hence it cannot be used to make a movie. However, LuCam Capture is easy to use, and you can check the camera options and play around with them.
 \item \textbf{TroublePix}. The video capturing is done with TroublePix. You can use the same camera options as LuCam Capture. You can change the camera settings in \emph{view}. Using TroublePix is straightforward and the settings can be found in the student manual.
 To install the software on a new computer, please contact Gerrit Kuik. 
-\item \textbf{MaxTRAQ}. Lastly, we use MaxTRAQ software. MaxTRAQ is the motion-analysis software that we will use. MaxTRAQ is able to track the position of points, the angle between the points, distances, etc. MaxTRAQ tracks objects by fitting an ellipsoid to the object of interest, the centre of the ellipsoid is the mean-position, thus the coordinates of objects. Furthermore, MaxTRAQ estimates, based on several frames, the velocity and the direction of the object, this enables us to track multiple objects without assignment problems (a very typical problem in multiple object tracking is that the software cannot distinguish the individual objects, this results in a messy data file.). To enable tracking the object of interest needs to have a high contrast with respect to the background. Furthermore, the object needs to have a well-defined shape (e.g. circle, square, etc.). The shape of the object may vary between frames but it should not vanish or break-up between the frames. To optimize the shape of the object you can use LED lights, clamps, theater lights and markers.
+\item \textbf{MaxTRAQ}. Lastly, we use MaxTRAQ software. MaxTRAQ is the motion-analysis software that we will use. MaxTRAQ is able to track the position of points, the angle between the points, distances, etc. MaxTRAQ tracks objects by fitting an ellipsoid to the object of interest, the centre of the ellipsoid is the mean-position, thus the coordinates of objects. Furthermore, MaxTRAQ estimates, based on several frames, the velocity and the direction of the object, this enables us to track multiple objects without assignment problems (a very typical problem in multiple object tracking is that the software cannot distinguish the individual objects, this results in a messy data file.). To enable tracking, the object of interest needs to have a high contrast with respect to the background. Furthermore, the object needs to have a well-defined shape (e.g. circle, square, etc.). The shape of the object may vary between frames but it should not vanish or break-up between the frames. To optimize the shape of the object you can use LED lights, clamps, theater lights and markers.
 
 At the start of the tracking analysis you have to select the objects to track. To track multiple object or when tracking angles, you have to select the appropriate settings and select each of the objects. For small objects, it can be useful to adjust the tracking region and sensitivity in the settings page. Before you track a whole video, try if you can see if the object is fully visible in the time-region of interest. If the object vanishes a lot it is most likely not worth investing the time to manually track every frame; you should make a better video. If the object is fully visible and does not break up, you can start the tracking software. The exact details to track the object are provided in the student manual. 
 
@@ -106,7 +106,7 @@ If the tracking fails, you can manually continue the tracking by re-selecting th
     \label{Figure: Pendulum setup}
 \end{figure}
 \subsubsection{Theory}
-The simple (mathematical) pendulum consists of a mass m attached to a massless cord of length l. The mass is constrained to move in the azimuthal direction $\theta$ and cannot stretch $\dot{l}=0$. When the mass is pulled out of equilibrium at an angle $\theta$ it wil make an arc of length s, the net force it will experience is a gravitation force $F_g = -mg\sin{\theta}$. Hence, Newton's equation for the movement along the arc s is given by:
+The simple (mathematical) pendulum consists of a mass $m$ attached to a massless cord of length $l$. The mass is constrained to move in the azimuthal direction $\theta$ and cannot stretch $\dot{l}=0$. When the mass is pulled out of equilibrium at an angle $\theta$ it wil make an arc of length s, the net force it will experience is a gravitation force $F_g = -mg\sin{\theta}$. Hence, Newton's equation for the movement along the arc s is given by:
 
 \begin{align}
     m\ddot{s} = -mg\sin(\theta).
@@ -153,6 +153,8 @@ Students can calculate the gravitational acceleration by fitting the oscillator 
     T = 2\pi \sqrt{\frac{l}{g}}\bigg{(}1+\frac{1}{16}\theta_0^2 + \frac{11}{3072}\theta_0^4 + \dots\bigg{)}.
 \end{align}
 
+Interestingly, the period T is not constant, but depends on the starting angle $\theta_0$. There are specific pendula that compensate for the starting angle $\theta_0$ such that the period is constant for every $\theta_0$. An example system is the Huygens pendulum, he confined the motion of the pendulum such that the period is constant. A nice reference is the paper "Kissing Huygens Cheeks, Schut et al. 2023".
+
 \subsubsection{Compound pendulum (hard)}
 The mathematical pendulum equation
 assumes a point mass m and a massless cord of length l. This is not very realistic, a physical pendulum however, corrects for the finite moment of inertia of the cord and mass. The physical model uses the torque $\tau = -mgL\sin(\theta)$ of the mass and calculates the resulting angular acceleration $\tau =I\alpha \approx I\ddot{\theta}$. $L$ is the distance from the pivot point to the centre of mass and $I$ is the moment of inertia around the pivot point. The resulting period T, again assuming $\sin(\theta)\approx\theta$, is therefore
@@ -175,12 +177,11 @@ If we plot the position against the velocity the phase-space plot shows a circle
 
 \newpage
 
-
 \section{Example Experiments}
 
 \subsection{Driven (Damped) Harmonic Motion}
 \subsubsection{Theory Driven Damped Harmonic Motion}
-In this experiment we have a massless spring with stiffness k and natural frequency $\omega_0$, connected to a periodic (sinusoidal) driving force $A(t) = F_0\cos(\omega_d t)$ and frequency $\omega_r$. Furthermore, the spring is connected to an adjustable mass m and the end of the spring is inside a tube that contains a viscous liquid. The (periodic) motion inside the viscous liquid results in a damping force $F_y = -cv$, with c a viscous damping coefficient and $v$ the velocity of the tube inside the liquid. The strength of the viscous damping can be controlled by hand. The Equation of Motion (EoM) in the y-direction (denoted by x) is:
+In this experiment we have a massless spring with stiffness k and natural frequency $\omega_0$, connected to a periodic (sinusoidal) driving force $A(t) = F_0\cos(\omega_d t)$ and frequency $\omega_r$. Furthermore, the spring is connected to an adjustable mass $m$ and the end of the spring is inside a tube that contains a viscous liquid. The (periodic) motion inside the viscous liquid results in a damping force $F_y = -cv$, with $c$ a viscous damping coefficient and $v$ the velocity of the tube inside the liquid. The strength of the viscous damping can be controlled by hand. The Equation of Motion (EoM) in the y-direction (denoted by x) is:
 
 \begin{align}
     m\ddot{x} = -c\dot{x} - kx + A(t) & \\
@@ -214,7 +215,7 @@ In the previous section we assumed that the harmonic oscillator was subjected to
     \label{Eq. Force balance damping}
 \end{align}
 
-The solution Eq. \ref{Eq. Force balance damping} can be obtained by filling in a trial solution $x(t) = Ae^{\lambda t}$ in Eq. \ref{Eq. Force balance damping} and solving the characteristic equation for $\lambda$:
+The solution Eq. \ref{Eq. Force balance damping} can be obtained by using a trial solution $x(t) = Ae^{\lambda t}$ in Eq. \ref{Eq. Force balance damping} and solving the characteristic equation for $\lambda$:
 
 \begin{align}
     \lambda^2 + 2\zeta\omega_0\lambda + \omega_0^2 = 0.
@@ -233,7 +234,7 @@ Again, in the absence of damping $\zeta = 0$, the equations reduce to a more fam
     x(t) = A\cos(\omega_0 t) & \\
     v(t) = - A \omega_0\sin(\omega_0 t).
 \end{align}
-The total energie of the system is given by $E=\frac{1}{2}mv^2+\frac{1}{2}kx^2$, in the absence of coupling, this is a conserved quantity.
+The total energy of the system is given by $E=\frac{1}{2}mv^2+\frac{1}{2}kx^2$, in the absence of coupling, this is a conserved quantity.
 \begin{align}
     \frac{d}{dt}E = \frac{d}{dt}(\frac{1}{2}mv^2 +\frac{1}{2}kx^2) & \\
     = \frac{d}{dt}(\frac{A^2 k}{2}) = 0
@@ -259,7 +260,7 @@ Lastly, we can extend the above analysis by examining the phase-space (x-v or x-
     \end{pmatrix}.
     \label{Eq. damping matrix}
 \end{align}
-M is the interaction matrix that connects the position to the momentum and vice versa. The off-diagonal terms couples the position and velocity and are Hamiltonian forces. The diagonal terms of M are gradient forces, i.e. non-Hamiltonian, thus do not conserve energy. From M we observe that a change in velocity results in change is the position and vice versa, the coupling results in an ellipsoid shape in phase space (x-v).
+$M$ is the interaction matrix that connects the position to the momentum and vice versa. The off-diagonal terms couples the position and velocity and are Hamiltonian forces. The diagonal terms of $M$ are gradient forces, i.e. non-Hamiltonian, thus do not conserve energy. From $M$ we observe that a change in velocity results in change is the position and vice versa, the coupling results in an ellipsoid shape in phase space (x-v).
 
 Subsequently, we solve equation \ref{Eq. damping matrix} by solving for the eigenvalues $|A-\lambda I| = 0$, the solution has the form
 
@@ -276,7 +277,7 @@ An equivalent analysis can be done in a simple (damped) pendulum, in that case t
 \subsubsection{Setup and results}
 The driven damped harmonic oscillator is a pre-build setup. If students want to use this setup, the should contact the technical support team.
 
-The setup consist of a spring with variable stiffness k connected with an external mass m. The coupled system of the spring and the mass have an eigenfrequency $\omega_0 = \sqrt{k/m}$, which can be varied by choosing a different mass or spring stiffness. The spring and mass are connected via a rod with a viscous damper. The damping force can be adjusted within the setup, the combined system can act as a damped oscillator. Furthermore, the damped oscillator can be connected to an electrical motor with adjustable frequency $\omega_r$. The schematic setup is shown in Fig. \ref{Figure: DDHM}a. The setup offers a lot of freedom in adjusting the parameters (driving/no-driving, low damping/high damping, etc.).
+The setup consist of a spring with variable stiffness $k$ connected with an external mass $m$. The coupled system of the spring and the mass have an eigen frequency $\omega_0 = \sqrt{k/m}$, which can be varied by choosing a different mass or spring stiffness. The spring and mass are connected via a rod with a viscous damper. The damping force can be adjusted within the setup, the combined system can act as a damped oscillator. Furthermore, the damped oscillator can be connected to an electrical motor with adjustable frequency $\omega_r$. The schematic setup is shown in Fig. \ref{Figure: DDHM}a. The setup offers a lot of freedom in adjusting the parameters (driving/no-driving, low damping/high damping, etc.).
 
 To track the y-motion of the oscillator is relatively straightforward. By connecting a simple LED light to the mass it is possible to track the y-position. If students are interested in the relative phase $\phi$ between the spring an the driving force $A_y$, you need multiple lED lights. Preferably at the mass and at the end of the rotor.
 
@@ -298,11 +299,11 @@ Show a resonance curve (A - $\omega_0$):
 By varying the driving frequency $\omega_r$ the amplitude of the oscillation changes. The amplitude $A$ is the amplitude in the y-position and the frequency can be extracted from the oscillation frequency in the y-direction. The frequency at the maximum amplitude corresponds to the eigenfrequency of the system $\omega_0$. The width of the resonance is a measure of the damping and can be extracted from the fit. A possible (very hard) extension to this experiment, is to calculate the relative phase between the driving force and the resulting force $\phi$, on resonance the relative phase is 90 degrees out of phase. 
 
 \subsubsection{Damping (both easy and hard)}    
-Calculate the damping coefficient c or $\zeta$ of the combined system:
+Calculate the damping coefficient $c$ or $\zeta$ of the combined system:
 \begin{align}
     x(t) = e^{-\zeta\omega_0 t}\cos(\omega_1t + \phi)
 \end{align}
-In this experiment the students can calculate the damping coefficient c or $\zeta$ of the damped oscillator model. The damping coefficient can be extracted from a simple x(t)-t graph. Note that the fit function contains two frequencies $\omega_0$ and $\omega_1 = \omega_0\sqrt(1-\zeta^2)$. If the damping is very weak, we can just assume $\omega_0\approx\omega_1$ (easy). However, for strong damping, the frequency of the oscillation starts to shift, investigate this phenomena (hard). An example (tracking) analysis of damped harmonic motion is shown in Fig.\ref{Figure: DDHM}b/c. 
+In this experiment the students can calculate the damping coefficient $c$ or $\zeta$ of the damped oscillator model. The damping coefficient can be extracted from a simple x(t)-t graph. Note that the fit function contains two frequencies $\omega_0$ and $\omega_1 = \omega_0\sqrt(1-\zeta^2)$. If the damping is very weak, we can just assume $\omega_0\approx\omega_1$ (easy). However, for strong damping, the frequency of the oscillation starts to shift, investigate this phenomena (hard). An example (tracking) analysis of damped harmonic motion is shown in Fig.\ref{Figure: DDHM}b/c. 
 
 \begin{figure}
     \includegraphics[width=12 cm]{figures/Damped Harmonic Motion.pdf}
@@ -321,11 +322,149 @@ If we plot the position against the velocity the phase-space plot shows a circle
 
 \newpage
 
-\subsection{Falling objects}
+\subsection{Coefficient of restitution of a ball}
 \subsubsection{Theory}
-\subsubsection{Setup and results}
+When e.g. a football falls down from a height $h$ the potential energy is converted into kinetic energy. The velocity at the ground can be calculated by an energy balance:
+\begin{align}
+    E_{pot} = E_{kin} & \\
+    v = \sqrt{2gh}.
+\end{align}
+When the ball hits the ground, a part of the energy is transferred to the ground, hence the velocity after hitting the ground $v'$ is lower than the initial velocity $v'< v$. 
 
+The ratio of the velocities is known as the coefficient of restitution:
+
+\begin{equation}
+    \epsilon = \frac{v'}{v} = \sqrt{\frac{h'}{h}}.
+\end{equation}
+
+with $\epsilon$ the coefficient of restitution and $h'$ the maximum height the ball reaches after the collision. Without any transfer of energy, i.e. a perfect elastic collision, the velocities $v'$ and $v$ are the same, hence $\epsilon = 1$. An (ideal) inelastic collision means that the final velocity $v'$ is zero, hence $\epsilon = 0$.
+
+The coefficient of restitution depends on the material of the ball and, even more important, the pressure inside the ball. 
+
+In the paper "\textit{Coefficient of restitution of pressurized balls: a mechanistic model}" the authors investigate the role of pressure and the corresponding coefficient of restitution.
+
+They assume that the football consists of an elastic material $k$ that stores (potential) energy during the compression at the impact. Furthermore, they assume that there's a dissipative force $F_d$ during the compression and decompression. Using these assumptions they show that the energy balance during compression is given by:
+
+\begin{align}
+    E_c = \frac{1}{2}kx^2 - mgx +F_d x.
+\end{align}
+
+Likewise, during decompression the energy balance reads:
+
+\begin{align}
+    E_d = \epsilon^2 E_c= \frac{1}{2}kx^2 - mgx - F_d x,
+\end{align}
+with $\frac{1}{2}kx^2$ the potential energy stored by the (de)compression $-mgx$ the potential energy of the ball and $F_dx$ the dissipated energy. Furthermore, they assume that part of the energy $\epsilon^2$ is transferred during the (de)compression, $E_d = \epsilon^2E_c$.
+
+The sum and difference of these equations read:
+
+\begin{align}
+   E_c(1+e^2) = kx^2 -2mgx &\\
+   E_c(1-e^2) = 2F_dx,
+\end{align}
+the ratio of these equations is:
+
+\begin{align}
+    \frac{1+e^2}{(1-e^2)^2} = \frac{(kx^2 -mgx) E_c}{4F_dx^2} & \\
+    \frac{1+e^2}{(1-e^2)^2}  \approx \frac{k E_c}{4F_d}.
+\end{align}
+
+The last line assumes that the stored energy is larger than the potential energy inside the ball $(1/2)kx^2>>mgx$. Next, they show that the spring constant $k$ is given by:
+
+\begin{align}
+    k = 2\pi R P_g + 4\pi GD_w,
+\end{align}
+with $G$ the shear modulus, $R$ the radius of the ball, $D_w$ a constant (?) and $P_g$ the gauge pressure inside the ball. The details are not so relevant, but qualitatively it shows that the restoring force $kx$ depends on the two factors. $2\pi R P_g x$ a 'Hookean' restoring force as a result of the compression of the ball and a restoring force that arises from the deformation of the wall $4\pi G D_w x$.
+
+Combing the equations above we arrive to:
+
+\begin{align}
+    \frac{1+e^2}{(1-e^2)^2}  = A P_g + B,
+\end{align}
+with $A = \frac{\pi R E_i}{2F_d^2}$ and $B = \frac{\pi GD_wE_i}{F_d^2}$. Both A and B are constants and do not have a clear physical meaning.
+
+The ratio ($(E_c+E_d)/(E_c-E_d)^2$) is linear in the ball pressure if the energy stored in the compression of the ball is much larger than the potential energy still available in the ball (this is not the potential energy at the start of the experiment. This is the potential energy that is still there during the compression, so almost zero.). This is true for most sports balls. It is
+certainly true for any ball stiff enough to support its own weight
+at zero gauge pressure without being significantly deformed.
+
+\subsubsection{Setup and results}
+In this experiment the students can study various elastic sport balls. An example setup is shown in Fig. \ref{Fig. falling object}. In this specific experiment a basketball was used. An LED was attached on top of the ball to track the position. The ball was released from a height $h$. The velocity at the ground can be calculated using $v = \sqrt{2gh}$. The ball was released carefully to minimize velocities in the x-direction.
+
+If we assume that air-resistance is negligible the y-position of the basketball is given by:
+
+\begin{align}
+    y(t)-y_0 = (-)\frac{1}{2}gt^2,
+\end{align}
+
+with $g$ the gravitational acceleration. The parabolic motion is clearly visible in Fig. \ref{Fig. falling object} c. The coefficient of restitution can easily be extracted by calculating the ratio of consecutive heights:
+
+\begin{align}
+    \epsilon = \sqrt{\frac{h_{i+1}}{h_{i}}},
+\end{align}
+with $h_i$ the height at bounce $i$. A different approach is to calculate the time of flight (TOF) between each bounce. 
+
+The TOF for a ball that starts with initial velocity $v_0$ (the velocity after the bounce) is given by:
+\begin{align}
+    t_{TOF} = \frac{2v_0}{g}.
+\end{align}
+
+The TOF ratio between two consecutive bounces is therefore:
+
+\begin{align}
+    \frac{t_{TOF,i+1}}{t_{TOF,i}} = \frac{v_{i+1}}{v_i} = \epsilon,
+\end{align}
+which is exactly the ratio of the velocities, hence the coefficient of restitution.
+
+The y-position of the basketball is shown in Fig. \ref{Fig. falling object} c. The first (half) bounce is removed from the data. The data shows the maximum heigh of each of the bounces (y-axis) and the TOF during each bounce (x-axis).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 12cm]{figures/Falling_object.pdf}
+    \caption{The falling basketball experiment. a) A schematic representation of the basketball. An LED was placed on top of the basketball. In b) the tracked position of the LED lights is shown. Obtained using MaxTRAQ 2D. c) The tracked y-position of the basketball. The first (half) bounce was removed from the data. The data shows 5 bounces.}
+    \label{Fig. falling object}
+\end{figure}
+
+\subsubsection{Calculate the coefficient of restitution of a ball(very easy)}    
+In this experiment the students can calculate the coefficient of restitution $\epsilon$ of various balls. The coefficient of 
+restitution can be calculated with the following two formulas:
+
+\begin{align}
+    \epsilon = \sqrt{\frac{h_{i+1}}{h_{i}}},
+\end{align}
+with $h_i$ the height at bounce $i$ and 
+\begin{align}
+    \epsilon = \frac{t_{TOF,i+1}}{t_{TOF,i}} = \frac{v_{i+1}}{v_i},
+\end{align}
+with $t_{TOF,i}$ the time of flight for bounce $i$.
+
+\subsubsection{Varying the pressure (hard)}    
+Show that ratio $(E_c+E_d)/(E_c-E_d)^2$ is linear in the gauge pressure. Combing the equations above we arrive to:
+
+\begin{align}
+    \frac{1+e^2}{(1-e^2)^2}  = A P_g + B,
+\end{align}
+with $A = \frac{\pi R E_i}{2F_d^2}$ and $B = \frac{\pi GD_wE_i}{F_d^2}$. Both $A$ and $B$ are constants and do not have a clear physical meaning.
+
+Students can use the literature review as inspiration and theoretical background. In the experiment it is best to use a basketball and increase the pressure of the ball. Otherwise the ball will deform too much and the theory does not apply anymore.
+
+Lastly, the linear equation is not a simple equation $e$. By using some elementary algebra the students can find a function of $e$ versus the gauge pressure $Pg$. First we define $k = A P_g + b$ and $x=e^2$, hence:
+
+\begin{align}
+    \frac{1+x}{(1-x)^2} = k & \\
+    (1+x) = x^2 k - 2xk +k & \\
+    x^2 k - x(2k+1) + (k-1) = 0, & \\
+\end{align}
+next we apply the quadratic formula and solve for $e$:
+\begin{align}
+    x_{\pm}  = \frac{(2k + 1) \pm \sqrt{(2k+1)^2 - 4(k-1)k}}{2k} & \\
+    x_{\pm}  = \frac{(2k+1) \pm \sqrt{4k^2 +4k + 1 -4k^2+4k}}{2k} & \\
+    x_{\pm}  = \frac{(2k+1) \pm \sqrt{8k + 1}}{2k} & \\ 
+    x_{-}  = 1+ \frac{1-\sqrt{8k + 1}}{2|k|}& \\ 
+    e = \sqrt{1+ \frac{1-\sqrt{8(AP_g+B) + 1}}{2(AP_g+B)}}.
+\end{align}
+Note that it is useful for the students to derive this result themselves (they should be able to do this). The TA should guide them through this process and alert the students to pick only one of the solutions of the quadratic equations. They should argue that you can only pick $x_{-}$, otherwise the coefficient of restitution can exceed 1.
 \newpage
+
 
 \subsection{Rotating Wheel}
 This section is originally developed by T.W. Hijmans.
@@ -375,7 +514,7 @@ When we fill the wheel with fluid and rotate it rapidly (situation B in Fig. \re
 The last, and most interesting for us, case is $v < v_0$, corresponding to panel C in Fig. \ref{Fig. wheel}. Without proof, we mention that in this case, we can expect the frictional force to be quadratic in velocity. In this case, equation (\ref{lambda2}) applies again, but now with a much larger value of $\lambda_2$ due to the stronger interaction between the wheel and the viscous fluid.
 
 \subsubsection{Setup and results}
-In this experiment the student will use a rotating wheel. A schematic setup is shown in Fig. \ref{Fig. Rotating Wheel}a). The positioning of the LED lights is essential and one LED needs to be attached to the outer surface, to maximize contrast we place the setup behid a black cardboard sheet. The second LED can be positioned in the center of the wheel. Obtaining a clear footage is difficult and it is worth to invest the time in optimizing the camera position. During the analysis the LED light can move behind the wheel pole, this is inevitable and it is still feasible to do the tracking. In Fig. \ref{Fig. Rotating Wheel} b) we show the tracked path of the LED lights. In Fig. \ref{Fig. Rotating Wheel} c) the x-position of the tracked position is shown, a peek-finding algorithm was used to detect the maxima and minima.
+In this experiment the student will use a rotating wheel. A schematic setup is shown in Fig. \ref{Fig. Rotating Wheel}a). The positioning of the LED lights is essential and one LED needs to be attached to the outer surface, to maximize contrast we place the setup behind a black cardboard sheet. The second LED can be positioned in the center of the wheel. Obtaining a clear footage is difficult and it is worth to invest the time in optimizing the camera position. During the analysis the LED light can move behind the wheel pole, this is inevitable and it is still feasible to do the tracking. In Fig. \ref{Fig. Rotating Wheel} b) we show the tracked path of the LED lights. In Fig. \ref{Fig. Rotating Wheel} c) the x-position of the tracked position is shown, a peek-finding algorithm was used to detect the maxima and minima.
 
 The x-position (or y-position) of the LED light shows a dissipating oscillating signal. However, the type of dissipation is unknown in this case. That means that we do not have a closed-form analytical solution for the x-position as a function of time. To calculate the angular velocity $\omega$ we have to calculate it at different time intervals. The procedure is as follows: find the time interval $T_{a-b}=T_a-T_b$ between the neighboring maxima (or minima). Convert this to an angular frequency by $\omega_{a-b} = \frac{2\pi}{T_{a-b}}$ and denote the center time $t_{a-b}$ between $T_a$ and $T_b$. This procedure should be done with all the minima and maxima. The procedure is tedious and labour intensive (you can use a programming language to speed this up), but the result is a graph of $\omega$-t. The time derivative can also be visualized $\frac{d\omega}{dt}-t$ and should be compared to the theoretical prediction. An example analysis of a empty wheel is shown in Fig. \ref{Fig. Rotating Wheel} e).
 
@@ -404,8 +543,71 @@ By analyzing the camera footage, you can track the changes in angular velocity a
 
 \subsection{Rolling Cylinder}
 \subsubsection{Theory}
-\subsubsection{Setup and results}
+In this experiment the students will roll down an object from an incline. The initial energy of the system $E_i$ is potential energy that depends on height (difference) $E_i = mgh$. When the object starts rolling down the incline the potential energy is converted to kinetic energy and rotation energy. The rotational moment of the object depends on the moment of inertia of the object. The moment of inertia of standard geometric object is well know and has the form $I = bmr^2$, with m the mass of the object, r the radius of the object and b a geometric dependend constant. Next, we assume that the kinetic energy of the object is the result of the rotational motion of the mass i.e. $v = \omega r$ and not an extra sliding velocity we can write the energy balance as
+\begin{align}
+    E_i = E_f & \\
+    mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2. & \\
+\end{align}
+Next, we solve for the velocity and we find 
 
+\begin{align}
+    v = \sqrt{\frac{gh}{1+b}}.
+\end{align}
+If we are interested in the acceleration we have to differentiate the velocity with respect to the time, i.e. 
+
+\begin{align}
+    \frac{d}{dt}(v^2) =\frac{d}{dt} (\frac{gh}{1+b}) &\\
+    2v\dot{v} = \frac{g\dot{h}}{1+b} & \\
+    a = \frac{g\sin(\theta)}{1+b},
+\end{align}
+where I used the chain-rule in the first line and used that the velocity along the incline $v$ is related to the vertical velocity $\dot{h}$ by $\dot{h} = |v|\sin{\theta}$. If we assume that the initial velocity is zero $v(0) = 0$ and that object starts at position $x_0$ can solve for the x-position as a function of time:
+
+\begin{align}
+    x(t) - x_0 = at = \frac{g\sin(\theta)}{1+b}.
+    \label{eq: rolling cylinder}
+\end{align}
+The moment of inertia of geometric objects can be found in any classical mechanics textbook, for a sphere we have $=\frac{2}{5}mr^2$,so $b=\frac{2}{5}$. Thus the acceleration of a sphere along an incline is $a = \frac{5}{7}g\sin(\theta)$. If we look at the ratio between the acceleration and gravitation force on the incline, we have $a/(g\sin(\theta) = \frac{5}{7}<1$ the reduced acceleration is slower as a result of the inertial moment of the object. Similarly, the reduced acceleration of a cylinder $a / g\sin(\theta) = 2/3$ is smaller than the reduced acceleration of a sphere, this is the result of a different distribution of mass. The "centre of mass" of half a cylinder is more outward distributed compared to the sphere, the resulting acceleration is therefore lower.
+
+\subsubsection{Setup and results}
+In this experiment the students can use multiple objects with varying moment of inertia to investigate the moment of inertia. An example setup is shown in Fig. \ref{Fig. rolling cylinder}. In this case an LED was attached to the side of a (hollow) cylinder. Ideally, one would attach the LED light to the center of the cylinder. Due to practical matters it is sometimes very difficult to attach the LED in the centre, hence the LED was placed at a distance $\gamma r$ of the cylinder, with r the radius of the cylinder and b is the fraction of the radius where the LED is attached (b = 0 if the LED is placed at the centre of the cylinder, b = 1 at the edge of the cylinder). 
+
+When the cylinder starts rolling, the tracked LED will experience an additional rotating motion $r_{rot}$, see Fig. \ref{Fig. rolling cylinder} b. The x-position of the rotating motion of the LED can be expressed as:
+
+\begin{equation}
+    x_{rot} = br\cos(\omega t + \phi),
+\end{equation}
+with $\omega = \frac{v}{r}$ the rotation motion of the LED. Since the velocity increases linear, we can express the rotational velocity as $\omega(t) = \frac{a t^2}{r}$. By combining these result with the previous result of the x-position we arrive to the equation of the x-position as a function of time:
+
+\begin{align}
+    x(t) - x_0 = at +x_{rot}(t) & \\
+    x(t) - x_0 =  \frac{g\sin(\theta)}{1+b}t + \gamma r\cos(\frac{
+        g\sin(\theta)t^2}{(1+b)r} +\phi).
+    \label{eq: rotational motion cylinder}
+\end{align}
+An example trajectory (+ fit) is shown in Fig. \ref{Fig. rolling cylinder} c/d.
+
+\subsubsection{Gravitational acceleration (both easy and hard)}    
+Calculate the gravitational acceleration $a$ using different angles $\theta$:
+
+\begin{align}
+    x(t) - x_0 =  \frac{g\sin(\theta)}{1+b}
+\end{align}
+In this experiment the students can calculate the gravitational acceleration of a rolling object. The students can choose between various objects e.g. (metal) spheres, (hollow) cylinders, etc. The moment of Inertia of these objects is known and students should look this up (or calculate if necessary). \\
+
+By varying the angle $\theta$ the students can observe a change in the acceleration $a$ of the object. By studying multiple angles the students can make a graph of the acceleration versus the (sine) of the angle $\theta$. The slope of the graph is $g/(1+b)$, the students can verify this. Similarly, by assuming that $g = 9.81$ students can check if $b$ is the correct value for their shape. \\
+
+A more complicated approach is to attach the LED at a distance $\gamma r$ of the cylinder. The research questions are the same, but the analysis is much more complicated. During the analysis the students should fit Eq. \ref{eq: rotational motion cylinder}, this is difficult. A good starting approach is (as always) to measure $r$, $\gamma$ and start with a simple quadratic equation. When the quadratic fit works (excluding the oscillating part), add the rotational part.
+
+
+
+
+
+\begin{figure}
+    \center
+    \includegraphics[width = 12 cm]{figures/Rolling Cylinder.pdf}
+    \caption{The moment of inertia experiment. a) The schematic setup of the rolling cylinder. The cylinder rolls down the incline with acceleration a. The acceleration depends on the mass distribution, hence the shape of the object. In this case the LED was attached to a hollow cylinder at position $\gamma r$. In b) the tracked position is shown using MaxTRAQ 2D. In c/d the x/y position of the LED is shown. The x/y-position experiences a constant gravitational force, hence it shows a quadratic shape. On top of the quadratic shape the LED experiences a rotational motion $x/y_{rot}$. Eq. \ref{eq: rotational motion cylinder} was used to fit the data. The fit provides information of the following parameters: $a$, $x_0$, $\gamma$ and $\phi$.}
+    \label{Fig. rolling cylinder}
+\end{figure}
 \newpage
 
 \subsection{Chaotic pendulum}
@@ -426,7 +628,7 @@ The first condition is referred to as the "Butterfly effect". The second conditi
 
 The second and third conditions are very hard to observe in an experimental system and a way beyond the level of a second year student. The first condition however, is relatively easy and can be characterized by a Lyapunov exponent.
 
-Given two starting trajectories in the phase-space with initial seperation $\delta d_0| = |d_1-d_2|$, the separation grows exponentially according to
+Given two starting trajectories in the phase-space with initial separation $\delta d_0| = |d_1-d_2|$, the separation grows exponentially according to
 
 \begin{align}
     |\delta(t)|\approx |\delta d_0|e^{\lambda t}.
@@ -452,9 +654,8 @@ with A the amplitude, $\omega$ the eigenfrequency of the pendulum and $\phi$ the
 where I used that $\epsilon \ll 1 $ and Taylor expanded the cosine and sine up to first order $\cos(\epsilon)\approx1$ and $\sin(\epsilon)\approx\epsilon$. Furthermore I used the sum and difference formule of the cosine function. The separation $|\delta\theta(t)|$ follows a sine function with amplitude $A\epsilon$, hence the separation is not constant, but periodic in nature. However, the separation may not be constant, but the orbits do not diverge. This implies that the Lyapunov exponent is zero $\lambda =0$. 
 
 \subsubsection{Setup and results}
-In this experiment the student will use a pre-build double pendulum. A schematic setup is shown in Fig. \ref{Fig. Lyapunov}a). The LED lights should be attached at the end of each of the pendulum. To maximize contrast the experiment was placed behind a black cardboard sheet. During the analysis the LED light can move behind the first pendulum, this is should be avoided. In Fig. \ref{Fig. Lyapunov} b) we show the tracked path of the LED lights. In Fig. \ref{Fig. Lyapunov} c) the separation of the trajectories is shown, the black line is a fit using Eq. \ref{Eq. Lyapunov} with $\lambda>0$. 
+In this experiment the students will use a pre-build double pendulum. A schematic setup is shown in Fig. \ref{Fig. Lyapunov}a). The LED lights should be attached at the end of each of the pendulum. To maximize contrast the experiment was placed behind a black cardboard sheet. During the analysis the LED light can move behind the first pendulum, this is should be avoided. In Fig. \ref{Fig. Lyapunov} b) we show the tracked path of the LED lights. In Fig. \ref{Fig. Lyapunov} c) the separation of the trajectories is shown, the black line is a fit using Eq. \ref{Eq. Lyapunov} with $\lambda>0$. 
 
-The x-position (or y-position) of the LED light shows a dissipating oscillating signal. However, the type of dissipation is unknown in this case. That means that we do not have a closed-form analytical solution for the x-position as a function of time. To calculate the angular velocity $\omega$ we have to calculate it at different time intervals. The procedure is as follows: find the time interval $T_{a-b}=T_a-T_b$ between the neighboring maxima (or minima). Convert this to an angular frequency by $\omega_{a-b} = \frac{2\pi}{T_{a-b}}$ and denote the center time $t_{a-b}$ between $T_a$ and $T_b$. This procedure should be done with all the minima and maxima. The procedure is tedious and labour intensive (you can use a programming language to speed this up), but the result is a graph of $\omega$-t. The time derivative can also be visualized $\frac{d\omega}{dt}-t$ and should be compared to the theoretical prediction. An example analysis of a empty wheel is shown in Fig. \ref{Fig. Rotating Wheel} e).
 
 \begin{figure}[H]
     \centering
@@ -462,20 +663,175 @@ The x-position (or y-position) of the LED light shows a dissipating oscillating 
     \caption{The double pendulum experiment. a) A schematic representation of the double pendulum. The initial separation $\delta d$ is determined visually and must be minimized. The LED lights track the position of both pendula, this enables to construct a displacement vector of the second pendulum. In b) the tracked position of the LED lights is shown. The experiment is repeated twice, the individual trajectories are shown in blue and green. Obtained using MaxTRAQ 2D. c) The separation between the two trajectories shown in the first 0.3 seconds. The black line is a fit using Eq. \ref{Eq. Lyapunov}, with $\lambda > 0$. }
     \label{Fig. Lyapunov}
 \end{figure}
+
 \subsubsection{Lyapunov exponent (easy \& hard)}
+The students can track the motion of the double pendulum by using small LED attached to the end of the pendulum. By tracking the motion of two similar release positions, the students can show that the system is chaotic.
 
-
+The students can choose which parameter they want to track. For example, they can calculate the spatial difference between the two oscillators $\delta d = \sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$, or, even better, they can track the difference in angle $\delta \theta = \theta_1-\theta_2$ between the two oscillators. The difference in angle $\theta$ is not bounded between $0$ and $2\pi$. In the book "Classical Mechanics" by Taylor, a very nice introduction to chaos theory is given. Students can use this book as a good reference and they can repeat some of the experiments.
 \newpage
 
 \subsection{Buoyancy}
 \subsubsection{Theory}
+Consider an experiment where a ball with density $\rho_b$ is immersed in a water tank containing water with a density of $\rho_w$. If the ball's density is less than that of the water ($\rho_b<\rho_w$), it will experience an upward force. The same reasoning also applies When the ball's density is larger than the density of water, then the ball will experience a downward force. The resulting force is known as the Buoyance force $F_b$. The concept of buoyancy force was first introduced by the ancient Greek mathematician and physicist Archimedes around 212 BC. This fundamental principle is now commonly referred to as Archimedes' Law.
+
+In simple terms, the principle states that the buoyant force $F_b$
+on an object is equal to the weight of the fluid displaced by the object, or the density $\rho$ of the fluid multiplied by the submerged volume V times the gravitational acceleration g.
+
+We can express this relation in the equation:
+\begin{equation}
+    F_b = \rho_w V g.
+\end{equation}
+An object that floats on the surface has an buoyancy force that is equal to the weight of the object $F_g$. When the object is submerged we have the following situation:
+
+\begin{align}
+    ma = F_b - Fz & \\
+    \rho_b V a = \rho_w g -\rho_b g & \\
+    a = g(\rho_g/\rho_b - 1),
+\end{align}
+for $\rho_g/\rho_b < (>) 1$ the ball will sink (rise), since $a<(>) 1$. Next, we solve for $x(t)$ and assuming that $v(0)=0$:
+
+\begin{align}
+    x(t)-x_0 = \frac{g}{2} \left( \rho_g/\rho_b - 1 \right)t^2.
+\end{align}
+
+The ball will move quadratic with time, the only difference with Newtons falling apple, i.e. normal gravity, is the direction and the magnitude of the acceleration. If we know the density of the ball $\rho_b$ we can examine the physical properties of the fluid.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/Buoyancy.pdf}
+    \caption{The setup of the buoyancy experiment. A ball of density $\rho_b$ is submerged into the water tank. The density of the ball and the water should be similar. The Lumenera Li255C captures the motion of the (rising) ball. The y-position of the ball is tracked using MaxTRAQ, the resulting movement is shown in the bottom of the graph.}
+    \label{Figure: buoyancy setup}
+\end{figure}
+
 \subsubsection{Setup and results}
+In this experiment the students can use a water tank (aquarium) to conduct their experiment. They should place a camera close the aquarium wall and maximize the contrast by using a (small) white ball. Furthermore, they should wear, preferably, black gloves and release the ball very careful. A slight instability at the moment of release of the ball will result in a drifting (out of plane) motion that is hard to track.
+Lastly, the density of the ball should not differ to much from the density of water, otherwise the ball becomes untrackable. Students can alter the density of a regular ping-pong ball to control the density, and thereby the acceleration.
+
+A schematic setup is shown in Fig. \ref{Figure: buoyancy setup}a. The tracked motion is shown in Fig. \ref{Figure: buoyancy setup}b.
+
+\subsubsection{density of fluid (easy)}
+In this experiment, students can determine the density of the fluid (or the ball) by analyzing the motion of the ball.
+
+The acceleration of the ball is related to the density of the fluid ($\rho_f$) and the density of the ball ($\rho_b$) according to the formula:
+
+\begin{align}
+a = g \left(\frac{\rho_f}{\rho_b} - 1\right),
+\end{align}
+
+where $g$ represents the acceleration due to gravity, which is a known constant.
+
+To determine the density of the fluid or the ball, students can analyze the motion of the ball and plot a graph of the vertical position (y) against time (t). The slope of this graph corresponds to the acceleration ($a$). By substituting the known value of $g$ and the measured acceleration ($a$) into the equation, they can solve for the density of the fluid or the ball, depending on which value they are interested in.
+
+\subsubsection{friction of the ball (hard)}
+In this experiment, students can explore the frictional behaviour of the ball in the fluid.
+
+The experimental setup is equivalent to the previous proposed research question. However, in this case the students can analyze the data in more detail. Due to the frictional interaction between the surface and the fluid, the maximum velocity of the ball is capped. An extended force balance is needed:
+
+\begin{align}
+    ma = F_b - Fz - F_w,& \\
+\end{align}
+with $F_w$ the frictional force. If we assume that $F_w$ scales quadratic with the velocity (i.e. quadratic drag) $F_w = \frac{1}{2}C_w A \rho_w v^2$ we arrive to the following differential equation:
+
+\begin{align}
+    \rho_b V_b \ddot{x} = g\left(\rho_f-\rho_b\right)V_b -\frac{C_w A \rho_w}{2m} \dot{x}^2 & \\
+    \ddot{x} = g \left(\frac{\rho_f}{\rho_b} - 1\right) - \frac{4C_w \pi r^2 \rho_w}{2m\rho_b \frac{4\pi r^3}{3}} \dot{x}^2 & \\
+    \ddot{x} = g \left(\frac{\rho_f}{\rho_b} - 1\right) - \frac{3C_w \rho_w}{2m\rho_b r} \dot{x}^2,
+\end{align}
+where $r$ is the radius of the ball and I used that the ratio of the surface area to the volume of a sphere is $3/r$, $A/V = 3/r$. The solution can be found using elementary calculus (it looks more difficult than it actually is), although I would recommend to use WolframAlpha:
+
+\begin{align}
+    x(t) - x_0 = \frac{\log{(\cosh{(\sqrt{AB}t})})}{B},
+\end{align}
+with $A = g\left(\frac{\rho_f}{\rho_b}-1\right)$ and $B = \frac{3C_w A \rho_w}{2r\rho_b r}$. 
+Lastly, the students can derive the terminal velocity $v_{\infty}$ by assuming that $ma = 0$, hence:
+
+\begin{align}
+    v_{\infty} = \sqrt{\frac{2rmg\left(\rho_f-\rho_b\right)}{3C_wA\rho_f}}.
+\end{align}
+
+
+
 
 \newpage
 
 \subsection{Elastic Collisions}
 \subsubsection{Theory}
+Newton's Cradle is an iconic physics toy model that visualizes the principles of momentum and energy conservation. This simple device consists of a row of identical metal spheres suspended from a sturdy frame. When set in motion, it showcases a fascinating display of energy transfer and harmonic motion.
+
+As each sphere swings back and forth, it collides with its neighboring sphere, during each collision the energy and momentum is transferred to the neighbouring sphere. Each collision is almost elastic, meaning that energy transfer is very efficient, hence the cradle will show many collisions before the energy is dissipated.
+
+When the first ball $i$ with mass $m$ is released at height $h$, the system has a total kinetic energy of:
+
+\begin{equation}
+    E_i = mgh,
+\end{equation}
+with $m$ the mass, $g$ the gravitational acceleration and $h$ the release height. Just before the impact, the energy is full converted to kinetic energy by
+
+\begin{align}
+    v = \sqrt{2gh}.
+\end{align}
+
+During the impact a fraction of the energy is transferred to the neighbouring sphere $E_{i+1} = \epsilon E_i$, with $E_{i+1}$ the energy of the neighbouring ball. $\epsilon$ is the coefficient of restitution for the elastic collision, with $\epsilon<1$. After $n$ collisions the sphere will hit the final ball with energy 
+
+\begin{equation}
+    E_n = \epsilon^n E_i.
+\end{equation}
+
+The final ball will convert the kinetic energy to potential energy hence
+
+\begin{equation}
+    h' = \epsilon^n h.
+\end{equation}
+$h'$ is the maximum height of final ball. The coefficient of restitution is derived by
+
+\begin{align}
+    \epsilon = \left(\frac{h'}{h}\right)^{\frac{1}{n}}  = \sqrt[n]{\frac{h'}{h}},
+\end{align}
+since the height $h'$ of the last ball is lower than the initial height $h$, the coefficient of restitution is lower than 1.
+
+
 \subsubsection{Setup and results}
+In this experiment the students can determine the coefficient of restitution of the Newtons Cradle. The coefficient of restitution depends on the type of material of the balls, but since Newtons Cradle is generally made of metallic balls the coefficient of restitution is between 0.95 and (almost) 1.
+
+To determine the coefficient of restitution, students need to track the motion of the outer balls. A schematic setup is shown in Fig. \ref{Figure: Newtons cradle setup}a).
+
+At the moment of release, the first ball will make a pendulum-like motion, with angular velocity
+
+\begin{equation}
+    \omega = \sqrt{\frac{g}{l}},
+\end{equation}
+
+with $g$ the gravitational acceleration and $l$ the length of the cord. 
+
+The y-position (and x-position as well) of the pendulum will make an oscillatory motion, hence
+
+\begin{equation}
+    y(t) - y_0= A\cos(\omega t + \phi),
+\end{equation}
+with $y_0$ and $\phi$ the initial position and phase, respectively. The amplitude $A$ of is the maximum height of the ball. Using the relative difference in amplitudes between consecutive swings and the number of balls the coefficient of restitution is given by
+
+\begin{equation}
+    \epsilon = \sqrt[n]{\frac{A_{i+1}}{A_i}}.
+\end{equation}
+
+\subsubsection{Coefficient of restitution (moderate)}
+Calculate the coefficient of restitution of Newtons Cradle. The theoretical background can be found in the previous section.
+
+In the experiment, it is much easier to track the balls by rotating the Newtons Cradle 180 degrees (up-side down). 
+
+An example curve of the x-position of the left ball is shown in Fig. \ref{Figure: Newtons cradle setup}c). 
+
+\subsubsection{Imperfect energy transfer (very hard)}
+In an ideal Newtons Cradle setup we have $\epsilon = 1$, i.e. no energy loss. However, a realistic experimental realization of Newtons Cradle always has a minimal energy loss during each collision, hence $\epsilon<1$. In this experiment, the student should investigate where the energy goes to. 
+
+At the moment of release, the total energy of the Cradle is isolated into the single ball, with energy $E=mhg$. After a few collisions a part of the energy is removed, but one may notice, that the whole structure starts oscillating with a different frequency $\omega_s$. Part of the energy of the single ball is transferred to the whole structure. How much and how efficient is this energy transferred?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{figures/Newtons_Cradle.pdf}
+    \caption{The setup of the Newtons Cradle experiment. A spherical mass $m$ makes an angular motion with angular velocity $\omega$. At the moment of impact, the momentum (and energy) is transferred to the next sphere. The final sphere will have an lower final energy, thus the amplitude of the cradle will decrease. The Lumenera Li255C captures the motion of the outer spheres. The tracked trajectories are in shown b), the x-position is shown in c).}
+    \label{Figure: Newtons cradle setup}
+\end{figure}
 
 % \section{Indeling dagdelen}
 
@@ -502,7 +858,7 @@ The x-position (or y-position) of the LED light shows a dissipating oscillating 
 % \begin{equation}\label{eq:1}
 %     \text{bandwidth} = \text{resolution} \times \text{frame rate} \times \text{color depth}
 % \end{equation}
-% waarbij de resolution wordt berekend door het product van de verticale en horizontale pixels. Color depth, of kleurendiepte, is een maat voor de hoeveelheid kleuren die een pixel kan aannemen. Voor dit experiment wordt er 8-bit grayscale gebruikt (8-bit zwart-wit), wat betekent dat er $2^8=256$ zwart-wit tinten beschikbaar zijn. We zullen tijdens dit experiment zwart-wit gebruiken omdat kleur (in TroublePix 12-bit) in de meeste gevallen geen toegevoegde waarde heeft. De bandbreedte wordt ook gelimiteerd door de gebruikte dataverbinding, in ons geval het USB 3.0 protocol. Een voorbeeld voor USB 3.0: De maximale theoretische overdrachtssnelheid die USB 3.0 kan leveren is 5 Gbps (5 Gigabit per seconde = 625 MegaByte per seconde, b = bit en B = Byte). Als we dit vergelijken met de bandbreedte van de video met de best mogelijke (maximale resolutie, beste kleurendiepte en hoogste frame rate) die de camera kan leveren komen we uit op een bandbreedte van $2048 \times 1088 \times 170 \times 12 = 4,55$ Gbps = 568,75 MBps. \\Dit betekent dat een filmpje van een aantal seconde al snel gigabytes aan opslag kan vullen. Omdat we de kleurendiepte constant houden is de bandbreedte een strijd tussen de resolutie en de frame rate, dus als je bijvoorbeeld een filmpje wilt opnemen met een hogere frame rate moet je een lagere resolutie nemen. Een andere resolutie kiezen kan je op twee manieren doen: je kan uit de lijst van resoluties de kiezen of je kan de Region Of Interest (ROI) aanpassen, waardoor je in principe een custom resolutie maakt. Bij opdracht (a) wordt er gevraagd naar de maximale frame rate bij maximale resolutie, dit is voor 8-bit ongeveer 250 fps. De student zal hierachter moeten komen door daadwerkelijk het filmpje te maken, omdat de berekeningen die we hier doen kunnen afwijken van de praktijk. Het is mogelijk dat de frame rate significant kan afwijken (in de tientallen procenten) als de camera erg warm is of als de camera is aangesloten aan een USB 2.0 poort. De camera kan in portrait (langer verticaal dan horizontaal) en landscape (langer horizontaal dan verticaal) worden gepositioneerd. Voor een object wat valt is het handiger om het in portrait te zetten, omdat de beweging van een vallend object alleen maar in de hoogte (dus verticaal) gebeurt. Bij (c) wordt er gevraagd hoe we nog een hogere frame rate kunnen halen. Zoals eerder genoemd is de bandbreedte afhankelijk van de frame rate en resolutie. Omdat we werken met de maximale resolutie, kunnen we een kleinere resolutie nemen en hiervan de ROI aanpassen om zo een hogere frame rate te krijgen.
+% waarbij de resolution wordt berekend door het product van de verticale en horizontale pixels. Color depth, of kleurendiepte, is een maat voor de hoeveelheid kleuren die een pixel kan aannemen. Voor dit experiment wordt er 8-bit grayscale gebruikt (8-bit zwart-wit), wat betekent dat er $2^8=256$ zwart-wit tinten beschikbaar zijn. We zullen tijdens dit experiment zwart-wit gebruiken omdat kleur (in TroublePix 12-bit) in de meeste gevallen geen toegevoegde waarde heeft. De bandbreedte wordt ook gelimiteerd door de gebruikte dataverbinding, in ons geval het USB 3.0 protocol. Een voorbeeld voor USB 3.0: De maximale theoretische overdrachtssnelheid die USB 3.0 kan leveren is 5 Gbps (5 Gigabit per seconde = 625 MegaByte per seconde, b = bit en B = Byte). Als we dit vergelijken met de bandbreedte van de video met de best mogelijke (maximale resolutie, beste kleurendiepte en hoogste frame rate) die de camera kan leveren komen we uit op een bandbreedte van $2048 \times 1088 \times 170 \times 12 = 4,55$ Gbps = 568,75 MBps. \\Dit betekent dat een filmpje van een aantal seconde al snel gigabytes aan opslag kan vullen. Omdat we de kleurendiepte constant houden is de bandbreedte een strijd tussen de resolutie en de frame rate, dus als je bijvoorbeeld een filmpje wilt opnemen met een hogere frame rate moet je een lagere resolutie nemen. Een andere resolutie kiezen kan je op twee manieren doen: je kan uit de lijst van resoluties de kiezen of je kan de Region Of Interest (ROI) aanpassen, waardoor je in principe een custom resolutie maakt. Bij opdracht (a) wordt er gevraagd naar de maximale frame rate bij maximale resolutie, dit is voor 8-bit ongeveer 250 fps. De student zal hierachter moeten komen door daadwerkelijk het filmpje te maken, omdat de berekeningen die we hi er doen kunnen afwijken van de praktijk. Het is mogelijk dat de frame rate significant kan afwijken (in de tientallen procenten) als de camera erg warm is of als de camera is aangesloten aan een USB 2.0 poort. De camera kan in portrait (langer verticaal dan horizontaal) en landscape (langer horizontaal dan verticaal) worden gepositioneerd. Voor een object wat valt is het handiger om het in portrait te zetten, omdat de beweging van een vallend object alleen maar in de hoogte (dus verticaal) gebeurt. Bij (c) wordt er gevraagd hoe we nog een hogere frame rate kunnen halen. Zoals eerder genoemd is de bandbreedte afhankelijk van de frame rate en resolutie. Omdat we werken met de maximale resolutie, kunnen we een kleinere resolutie nemen en hiervan de ROI aanpassen om zo een hogere frame rate te krijgen.
 
 % \subsubsection{Opdracht 3}
 % Dit is de eerste opdracht waarbij alle kennis over hardware en software wordt toegepast bij een experiment. De studenten zullen met deze opdracht de valversnelling $g$ bepalen met behulp van een slinger. Hiervoor gebruiken we een model van een simpele harmonische oscillator, in plaats van een gedempte oscillator (kan alsnog gebruikt worden als verdiepende opdracht). De reden dat we geen gedempte oscillator gebruiken is omdat het filmpje wat wordt opgenomen maar een paar oscillaties zal bevatten. Bij (a) wordt er gevraagd waarom we de luchtweerstand kunnen verwaarlozen en als hint wordt gegeven dat de luchtweerstand evenredig is met het kwadraat van de snelheid. We mogen dit doen om twee redenen: als eerste, we kijken maar naar een paar oscillaties, dus dat betekent dat de amplitude van ons signaal nauwelijks afneemt over deze tijd. Als tweede, we mogen luchtweerstand verwaarlozen voor dezelfde reden dat ons model evenredig is aan een sinus, want we kijken naar kleine hoeken waar de snelheid relatief klein is. Nu is het aan de student om de opstelling te bouwen en de meting te doen. Als het goed is staat de camera al klaar en moet alleen de slinger klaargezet worden. De slinger zelf kan belicht worden met theaterlampen of er kan een LED lichtje worden opgehangen. Vervolgens moeten de studenten met TroublePix de best mogelijke instellingen vinden om uiteindelijk een frame rate van ongeveer 300 fps te behalen. De makkelijkste instelling is de sluitertijd, die mag maximaal $\frac{1}{300}$s zijn. Vervolgens kan je met de hoogste resolutie en juiste ROI kijken of je 300 fps kan bereiken, zo niet pas dan eerst de resolutie en dan de ROI aan. Bij het bouwen van de opstelling moet goed gelet worden op een aantal dingen:

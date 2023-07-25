@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  21 JUN 2023 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.5)  25 JUL 2023 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -219,40 +219,73 @@ Package pdftex.def Info: figures/Pendulum setup.png  used on input line 104.
 <figures/Damped Harmonic Motion.pdf, id=62, 571.13374pt x 529.98pt>
 File: figures/Damped Harmonic Motion.pdf Graphic file (type pdf)
 <use figures/Damped Harmonic Motion.pdf>
-Package pdftex.def Info: figures/Damped Harmonic Motion.pdf  used on input line 308.
+Package pdftex.def Info: figures/Damped Harmonic Motion.pdf  used on input line 309.
 (pdftex.def)             Requested size: 341.43306pt x 316.83401pt.
- [14] [15 <./figures/Damped Harmonic Motion.pdf>] [16]
-<figures/wiel.png, id=122, 963.6pt x 542.025pt>
+ [14] [15 <./figures/Damped Harmonic Motion.pdf>] [16] [17]
+<figures/Falling_object.pdf, id=126, 571.13374pt x 520.94624pt>
+File: figures/Falling_object.pdf Graphic file (type pdf)
+<use figures/Falling_object.pdf>
+Package pdftex.def Info: figures/Falling_object.pdf  used on input line 422.
+(pdftex.def)             Requested size: 341.43306pt x 311.43346pt.
+ [18] [19 <./figures/Falling_object.pdf>] [20]
+<figures/wiel.png, id=188, 963.6pt x 542.025pt>
 File: figures/wiel.png Graphic file (type png)
 <use figures/wiel.png>
-Package pdftex.def Info: figures/wiel.png  used on input line 337.
+Package pdftex.def Info: figures/wiel.png  used on input line 476.
 (pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
- [17 <./figures/wiel.png>] [18]
-<figures/Rotating Wheel.pdf, id=129, 722.7pt x 509.905pt>
+ [21 <./figures/wiel.png>] [22]
+<figures/Rotating Wheel.pdf, id=195, 722.7pt x 509.905pt>
 File: figures/Rotating Wheel.pdf Graphic file (type pdf)
 <use figures/Rotating Wheel.pdf>
-Package pdftex.def Info: figures/Rotating Wheel.pdf  used on input line 384.
+Package pdftex.def Info: figures/Rotating Wheel.pdf  used on input line 523.
 (pdftex.def)             Requested size: 341.43306pt x 240.90025pt.
- [19 <./figures/Rotating Wheel.pdf>] [20] [21] [22]
-<figures/Lyapunov.pdf, id=187, 571.13374pt x 520.94624pt>
+ [23 <./figures/Rotating Wheel.pdf>] [24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 594--596
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
+
+ []
+
+<figures/Rolling Cylinder.pdf, id=250, 567.11874pt x 538.01pt>
+File: figures/Rolling Cylinder.pdf Graphic file (type pdf)
+<use figures/Rolling Cylinder.pdf>
+Package pdftex.def Info: figures/Rolling Cylinder.pdf  used on input line 607.
+(pdftex.def)             Requested size: 341.43306pt x 323.91675pt.
+[26] [27 <./figures/Rolling Cylinder.pdf>] [28]
+<figures/Lyapunov.pdf, id=308, 571.13374pt x 520.94624pt>
 File: figures/Lyapunov.pdf Graphic file (type pdf)
 <use figures/Lyapunov.pdf>
-Package pdftex.def Info: figures/Lyapunov.pdf  used on input line 461.
+Package pdftex.def Info: figures/Lyapunov.pdf  used on input line 662.
 (pdftex.def)             Requested size: 341.43306pt x 311.43346pt.
- [23] [24 <./figures/Lyapunov.pdf>] [25] [26] (./main.aux) ) 
+ [29] [30 <./figures/Lyapunov.pdf>]
+<figures/Buoyancy.pdf, id=365, 571.13374pt x 520.94624pt>
+File: figures/Buoyancy.pdf Graphic file (type pdf)
+<use figures/Buoyancy.pdf>
+Package pdftex.def Info: figures/Buoyancy.pdf  used on input line 701.
+(pdftex.def)             Requested size: 341.43306pt x 311.43346pt.
+ [31] [32 <./figures/Buoyancy.pdf>] [33] [34]
+<figures/Newtons_Cradle.pdf, id=429, 571.13374pt x 520.94624pt>
+File: figures/Newtons_Cradle.pdf Graphic file (type pdf)
+<use figures/Newtons_Cradle.pdf>
+Package pdftex.def Info: figures/Newtons_Cradle.pdf  used on input line 831.
+(pdftex.def)             Requested size: 341.43306pt x 311.43346pt.
+ [35] [36 <./figures/Newtons_Cradle.pdf>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2713 strings out of 478268
- 42777 string characters out of 5846348
- 355028 words of memory out of 5000000
- 20908 multiletter control sequences out of 15000+600000
+ 2747 strings out of 478268
+ 43819 string characters out of 5846348
+ 355084 words of memory out of 5000000
+ 20938 multiletter control sequences out of 15000+600000
  475942 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,14n,62p,2684b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,14n,62p,2685b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (26 pages, 663841 bytes).
+Output written on main.pdf (36 pages, 844364 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 554 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

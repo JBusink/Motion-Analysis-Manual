@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1687334238 "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" "main.pdf" "main" 1687334239
-  "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" 1687334238 60089 c753b68d9a4bd3b44d65efb6fbea810d ""
+["pdflatex"] 1690284121 "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" "main.pdf" "main" 1690284122
+  "/Users/jbusink/Documents/GitHub/Motion-Analysis-Manual/Motion_analysis_TA_manual/main.tex" 1690284121 85180 9941cde674862c6335985f0a4e9d4759 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -64,14 +64,18 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1649146756 2826436 d0532fe7c13ea1f020d6e50171e700db ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
+  "figures/Buoyancy.pdf" 1684329310 36387 dc2fcfa2d887972f5a90226ed63201f7 ""
   "figures/Damped Harmonic Motion.pdf" 1684329310 52801 00a80dc08a136b2d99b8a6558f984bfe ""
+  "figures/Falling_object.pdf" 1684329310 34658 85d6329f0c30ae35867e13d32cf6c748 ""
   "figures/Lyapunov.pdf" 1684329310 39112 4fcc40577f74b0a1148c52158a1dacf5 ""
+  "figures/Newtons_Cradle.pdf" 1684329310 35348 c3ddd47808b1fbfe6ab65a500a93b337 ""
   "figures/Pendulum setup.png" 1687273967 133767 ac652f66fc788ff56fe3637b7e75c66a ""
+  "figures/Rolling Cylinder.pdf" 1684329310 47491 45e5d867b2b6a7d16abf20d33634a765 ""
   "figures/Rotating Wheel.pdf" 1684329310 214584 721837373df9612023489271e56ed215 ""
   "figures/wiel.png" 1679573936 44099 cae3087e3d5464d144098af70e3884de ""
-  "main.aux" 1687334239 8297 0e5e73b8042f53e496390c1a48ec7a87 "pdflatex"
-  "main.tex" 1687334238 60089 c753b68d9a4bd3b44d65efb6fbea810d ""
-  "main.toc" 1687334239 3069 09383da96ed6fc83bb1d0ee13b866661 "pdflatex"
+  "main.aux" 1690284121 11767 ed1e57717cf2b5e816d9cd34c1a6d0c9 "pdflatex"
+  "main.tex" 1690284121 85180 9941cde674862c6335985f0a4e9d4759 ""
+  "main.toc" 1690284121 3756 a2b2e613f64494b84e310cba116e67fa "pdflatex"
   (generated)
   "main.aux"
   "main.log"
